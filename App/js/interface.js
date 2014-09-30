@@ -75,24 +75,12 @@
 
 		$(function(){
 
-		$.get( "getvars.php" )
-		.done(function( data ) {
-			var arr = JSON.parse(data);
-			//console.log(arr);
-			$( "#returnData").html(arr[0]['headerboxShadow']);
-    		//alert( "Data Loaded: " + data );
-    	 });
+			$.get( "/framework2-study/get-vars" )
+			.done(function( data ) {
+				var arr = JSON.parse(data);
+				console.log(arr);
 
-			// designvars = new Array();
-			// $.ajax({
-			//     url:"getvars.php",
-			//     type:"POST",
-			//     success:function(msg){
-			//         designvars = msg;
-			//     },
-			//     dataType:"json"
-			// });
-			
-			// dump(designvars);
+				//$( "#returnData").html(arr[0]['headerboxShadow']);
+	    	 });
 
 		});		

@@ -6,6 +6,7 @@ $app->start();
 $router = new Router;
 
 $router->rule('/', 'Controller');
-$router->rule('/videos', 'VideoPageController');
+$router->rule('/get-vars', 'DatabaseController');
+
 
 $router->handle();

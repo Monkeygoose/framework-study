@@ -56,7 +56,7 @@ class Controller {
 			"contentClass" => "maincontent",
 			"footerClass" => "footer",
 			"colOneContent" => "homepageContent",
-			"colTwoContent" => "videopageContent"
+			"colTwoContent" => "homepageContent"
 		);
 		
 		$response->setBody($view->render($variables));

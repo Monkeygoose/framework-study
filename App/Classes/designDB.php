@@ -17,7 +17,7 @@ class designDB {
 		$query = "CREATE table IF NOT EXISTS $tablename (ID INT( 11 ) AUTO_INCREMENT PRIMARY KEY, SUBDATE DATE NOT NULL, ";
 
 		foreach ($post as $key => $value) {
-			$query .= $key." ".checknumber($value)." ,";
+			$query .= $key." ".$this->checknumber($value)." ,";
 		};
 
 		$query .= "bandname TEXT NOT NULL );";
@@ -39,7 +39,7 @@ class designDB {
 		//CHECK TO SEE IF COLUMN EXISTS BEFORE TRYING TO INSERT INFORMATION INTO IT
 		//SHOULD BE INSIDE A FOREACH LOOP WITH POST VARS
 		foreach ($post as $key => $value) {
-			$type = checknumber($value);
+			$type = $this->checknumber($value);
 			$query = $this->db->prepare("DESCRIBE $tablename");
 			$query->execute();
 			$tableFields = $query->fetchAll(PDO::FETCH_COLUMN);
@@ -97,6 +97,14 @@ class designDB {
 				die($e->getmessage());
 			}		
 
+	}
+
+	public function checknumber($var){
+		if (is_numeric($var)){
+			return "INT (32) NOT NULL";
+		} else {
+			return "TEXT NOT NULL";
+		}
 	}
 
 }

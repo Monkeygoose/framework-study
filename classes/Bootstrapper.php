@@ -1,6 +1,7 @@
 <?php
 
 require_once("FileSystem/Glob.php");
+require_once("Functions.php");
 
 class Bootstrapper {
 
