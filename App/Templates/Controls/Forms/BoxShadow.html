@@ -1,0 +1,47 @@
+<div class='draggable $ClassName-boxShadowControls close' style="left: 180px; top: 21.4375px;">
+
+	<div class='boxcontrols'>
+
+		<div class='controlsheader'>$toolTitle Shadow</div>
+
+		<div class='btn min' onclick="showhide('.$ClassName-boxShadowControls','.min','minimise');"><span></span></div>
+
+	</div>
+
+	<div class="inputs">
+
+			<p>Horizontal Position</p>
+
+			<input class="shadowvalues $ClassName-bsX" type="range" min="0" max="10" step="1" data-target=".$ClassName" data-unit="px">
+
+			<p>Vertical Position</p>
+
+			<input class="shadowvalues $ClassName-bsY" type="range" min="0" max="10" step="1" data-target=".$ClassName" data-unit="px">
+
+			<p>Blur</p>
+
+			<input class="shadowvalues $ClassName-bsBlur" type="range" min="0" max="25" step="1" data-target=".$ClassName" data-unit="px">
+
+			<p>Spread</p>
+
+			<input class="shadowvalues $ClassName-bsSpread" type="range" min="0" max="25" step="1" data-target=".$ClassName" data-unit="px">
+
+			<p>Type</p>
+
+			<select class="shadowvalues $ClassName-bsType" data-target=".$ClassName">
+
+				<option value="inset">inset</option>
+
+				<option value="outset">outset</option>
+
+			</select>
+
+			<p>Colour</p>
+
+			<input class="color shadowvalues $ClassName-bsColour" data-target=".$ClassName" data-unit="#">
+
+			<input id="$ClassNameboxShadow" class="$ClassNameboxShadow" type="hidden" name="$ClassNameboxShadow" data-target=".$ClassName">
+
+	</div>
+
+</div>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="/framework2-study/App/css/styles.css">
+    <!-- Admin css -->
+    <link rel="stylesheet" type="text/css" href="/framework2-study/App/css/admincss.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+
+    <!-- Admin JS -->
+    <script type="text/javascript" src="/framework2-study/App/java/jscolor/jscolor.js"></script>
+    <!-- Java scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+
+    <title>$Title</title>
+
+  </head>
+
+  <body class="contentGrid">
+  <div class="toolscontainer"></div>
+    <div class="page">
+
+      <div class="overlay hidden"></div>
+
+      <% include Design %>
+
+        <div class="column full">
+
+          <div class="$headerClass">
+
+            <div class="overlay hidden"></div>
+
+            <% include Header %>
+
+          </div>
+
+        </div>
+
+        <div class="column full">
+
+          <nav class="$navClass">
+
+            <div class="overlay hidden"></div>
+
+            <ul>
+
+              <% include Navigation %>
+
+            </ul>
+
+          </nav>
+
+        </div>
+
+        <div class="column full">
+
+          <div class="$contentClassWrapper">
+
+            <div class="overlay hidden"></div>
+
+              <% include $Layout %>
+
+            <div class="clearfix"></div>
+
+          </div>
+
+        </div>
+
+        <div class="column full">
+
+          <div class="$footerClass">
+
+            <div class="overlay hidden"></div>
+
+            <% include Footer %>
+
+          </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+    </div>
+
+  <% include Foot %>
+
+  </body>
+
+</html>
